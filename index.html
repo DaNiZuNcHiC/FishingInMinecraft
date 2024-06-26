@@ -1,0 +1,539 @@
+<html>
+	<head>
+		<title>Рыбалка в Майнкрафт</title>
+		<link type="image/x-icon" href="favicon.ico" rel="icon">
+		<style>
+			body{
+				background-image: url(game1.jpg);
+				background-size: 100% 100%;
+				overflow: hidden
+				;
+			}
+
+			.stick{
+				display: block;
+				position: absolute;
+				bottom: -30px;
+				right: 100px;
+				height: 600px;
+				width: 150px;
+				transform: rotate(-23deg);
+				cursor: pointer;
+			}
+
+			.stick:hover {
+				bottom: 5px;
+				transform: rotate(0deg);
+			}
+
+			.float {
+				position: absolute;
+				bottom: 250px;
+				left: 35%;
+				width: 50px;
+				height: 60px;
+			}
+
+			.about {
+				color: green;
+				font-size: 30px;
+				cursor: pointer;
+			}
+
+			.about:hover {
+				color: yellow;
+				font-size: 30px;
+			}
+
+			.secret {
+				color: darkred;
+				font-size: 50px;
+				opacity: 0.01;
+				cursor: pointer;
+			}
+
+			.secret:hover {
+				color: darkred;
+				font-size: 50px;
+				opacity: 1;
+			}
+
+			.vedro {
+				position: absolute;
+				bottom: 215px;
+				right: 250px;
+				height: 150px;
+				width: 170px;
+				cursor: pointer;
+			}
+
+			.vedro:hover {
+				position: absolute;
+				bottom: 215px;
+				right: 250px;
+				height: 175px;
+				width: 200px;
+			}
+
+			.sign {
+				display: none;
+				position:absolute;
+				top: 25%;
+				left: 25%;
+				width: 1000px;
+				height: 800px;
+				background-image: url(sign.png);
+				background-size: 100% 100%;
+				z-index: 99;
+			}
+
+			.text {
+				position: absolute;
+				font-size: 42px;
+				color: darkolivegreen;
+				top: 5%;
+				left: 20%;
+				font-weight: 600;
+			}
+
+			.karas {
+				position: absolute;
+				top: 22%;
+				left: 32%;
+				width: 350px;
+				height: 200px;
+			}
+
+			.loc {
+				display: block;
+				position: absolute;
+				font-size: 35px;
+				background-color: #4CBB17;
+				color: #D12300;
+				top: 50px;
+				right: 50px;
+				height: 125px;
+				width: 200px;
+				border-radius: 30% 30% 30% 30%;
+				font-weight: 600;
+			}
+
+			.loc5 {
+				display: none;
+				position: absolute;
+				font-size: 35px;
+				background-image: url(game1.jpg);
+				background-size: 100% 100%;
+				color: #D12300;
+				top: 50px;
+				right: 50px;
+				height:125px;
+				width: 200px;
+				border-radius: 30% 30% 30% 30%;
+				font-weight: 600;
+			}
+
+			.loc4 {
+				display: none;
+				font-size: 35px;
+				position: absolute;
+				background-image: url(game2.jpg);
+				background-size: 100% 100%;
+				color: #D12300;
+				top: 50px;
+				right: 300px;
+				height: 125px;
+				width: 200px;
+				border-radius: 30% 30% 30% 30%;
+				font-weight: 600;
+			}
+
+			.loc3 {
+				display: none;
+				position: absolute;
+				font-size: 35px;
+				background-image: url(game3.jpg);
+				background-size: 100% 100%;
+				color: #D12300;
+				top: 50px;
+				right: 550px;
+				height: 125px;
+				width: 200px;
+				border-radius: 30% 30% 30% 30%;
+				font-weight: 600;
+			}
+
+			.loc2 {
+				display: none;
+				position: absolute;
+				font-size: 35px;
+				background-image: url(game4.jpeg);
+				background-size: 100% 100%;
+				color: #D12300;
+				top: 50px;
+				right: 800px;
+				height: 125px;
+				width: 200px;
+				border-radius: 30% 30% 30% 30%;
+				font-weight: 600;
+			}
+
+			.loc1 {
+				display: none;
+				position: absolute;
+				font-size: 35px;
+				background-image: url(game5.png);
+				background-size: 100% 100%;
+				color: #D12300;
+				top: 50px;
+				right: 1050px;
+				height: 125px;
+				width: 200px;
+				border-radius: 30% 30% 30% 30%;
+				font-weight: 600;
+			}
+
+			.loc6 {
+				display: none;
+				position: absolute;
+				font-size: 35px;
+				background-image: url(game6.jpg);
+				background-size: 100% 100%;
+				color: #D12300;
+				top: 50px;
+				right: 1300px;
+				height: 125px;
+				width: 200px;
+				border-radius: 30% 30% 30% 30%;
+				font-weight: 600;
+			}
+
+			.frede {
+				display: none;
+				position: absolute;
+				width: 700px;
+				height: 800px;
+				top: 10%;
+				right: 33%;
+			}
+
+			.podsech{
+				position: absolute;
+				font-size: 25px;
+				background-color: #EFD334;
+				color: #D12300;
+				top: 200px;
+				right: 50px;
+				height: 125px;
+				width: 150px;
+				border-radius: 90%;
+				font-weight: 600;
+			}
+
+			.close {
+				display: none;
+				position: absolute;
+				font-size: 20px;
+				color: #D12300;
+				background-color: #EFA94A;
+				width: 100px;
+				height: 60px;
+				top: 315px;
+				right: 525px;
+				border-radius: 10%;
+				z-index:100;
+			}
+
+		</style>
+	</head>
+	<body onload="start()" onmousedown="setFloatPosition()">
+		<script type="text/javascript">
+			alert("___НАЧАТЬ???___");
+			var oerf = 0;
+			var rfhfcm = 0;
+			var cfpfy = 0;
+			var rhfcyjgthrf = 0;
+			var ajhtkm = 0;
+			var a = 0;
+			var b =0;
+
+			var text = null;
+			var float = null;
+			var loc = null;
+			var loc1 = null;
+			var loc2 = null;
+			var loc3 = null;
+			var loc4 = null;
+			var loc5 = null;
+			var loc6 = null;
+			var stick = null;
+			var vedro = null;
+			var podsech = null;
+			var close = null;
+			var karas = null;
+			var bite = false;
+			var freddy = null;
+			var frede = null;
+
+			location = "1";
+
+			function start() {
+				let randomTimeout=Math.floor(Math.random()*15000);
+				setTimeout(changeFloat, randomTimeout);
+
+				text = document.getElementById("text");
+				float = document.getElementById("float1");
+				loc = document.getElementById("0");
+				loc1 = document.getElementById("1");
+				loc2 = document.getElementById("2");
+				loc3 = document.getElementById("3");
+				loc4 = document.getElementById("4");
+				loc5 = document.getElementById("5");
+				loc6 = document.getElementById("6");
+				stick =document.getElementById("stick");
+				vedro = document.getElementById("vedro");
+				podsech = document.getElementById("podsech");
+				karas = document.getElementById("karas");
+				close = document.getElementById("close");
+				frede=document.getElementById("frede");
+
+				bite = false;
+
+				playBackgroundSound();
+			}
+
+			function closeFish(){
+				sign.style.display="none";
+				close.style.display="none";
+				float.src="Poplavok1.png";
+				float.style.bottom="20%";
+				float.style.left="20%";
+				start();
+			}
+
+			function openVedro(){
+				alert("Вы поймали " + oerf + " щук, "+rfhfcm+" золотых карасей, "+cfpfy+" сазанов, "+rhfcyjgthrf+" краснопёрок, "+ajhtkm+" форелей.");
+			}
+
+			function getFish(){
+				let sign = document.getElementById("sign");
+				sign.style.display="block";
+
+				let random=Math.floor(Math.random()*10);
+				let randomMass=Math.floor(Math.random()*5000);
+
+				if (random == 1){
+					randomMass*=1.75;
+					karas.src = "Fish/fish1.jpg";
+					text.innerHTML = "Вы поймали ЩУКУ.<br> <br>Вес в граммах: "+randomMass;
+					oerf++;
+				}
+				if (random == 0 || random == 2){
+					randomMass*=0.3;
+					karas.src = "Fish/fish2.webp";
+					text.innerHTML = "Вы поймали ЗОЛОТОГО КАРАСЯ.<br> <br>Вес в граммах: "+randomMass;
+					rfhfcm++;
+				}
+				if (random == 3 || random == 7){
+					randomMass*=2.5;
+					karas.src = "Fish/fish3.webp";
+					text.innerHTML = "Вы поймали САЗАНА.<br> <br>Вес в граммах: "+randomMass;
+					cfpfy++;
+				}
+				if (random == 4 || random == 6){
+					randomMass *= 0.25;
+					karas.src = "Fish/fish4.jpg";
+					text.innerHTML = "Вы поймали КРАСНОПЁРКУ.<br> <br>Вес в граммах: "+randomMass;
+					rhfcyjgthrf++;
+				}
+				if (random == 5 || random == 8){
+					karas.src = "Fish/fish5.png";
+					text.innerHTML = "Вы поймали ФОРЕЛЬ.<br> <br>Вес в граммах: "+randomMass;
+					ajhtkm++;
+				}
+				if (random > 8){
+					randomMass*=2.5;
+					karas.src = "Fish/banka.jpg";
+					text.innerHTML = "Ложная поклёвка!";
+				}
+
+				if (randomMass<1500 && randomMass>1400){
+					frede.style.display="block";
+					closeFish();
+				}
+
+				bite=false;
+
+				close.style.display="block";
+				
+				console.log(random);
+			}
+
+			function changeFloat(){
+				float.src = "Poplavok2.png";
+				bite=true;
+				setTimeout(changeFloat2, 3000);
+			}
+
+			function changeFloat2(){
+				float.src = "Poplavok1.png";
+				if (bite == true){
+					bite=false;
+					start()
+				}
+
+			}
+
+			function setFloatPosition(){
+				let x =window.event.clientX;
+				let y =window.event.clientY;
+
+				if(location == "1") {
+					if(y>360 && y<800 && x<1200) {
+						float.style.top=y+"px";
+						float.style.left=x+"px";
+
+						stick.style.left=(x+150)+"px";
+					}
+				}
+
+				if (b==0){
+					playBackgroundSound();
+					b=1;
+				}
+
+			}
+
+			function fishBite(){
+				if (bite == true){
+					getFish();
+					podsech.style.backgroundColor="#EBC7DF";
+					setTimeout(changeColor2, 750);
+				}
+				else {
+					alert("Не клюёт");
+					podsech.style.backgroundColor="#EBC7DF";
+					setTimeout(changeColor2, 750);
+				}
+			}
+
+			function changeColor2(){
+				podsech.style.backgroundColor="#EFD334";
+			}
+
+
+			function changeLocation1(){
+				document.body.style.backgroundImage = "url(game1.jpg)";
+				loc.style.display="block";
+				loc1.style.display="none";
+				loc2.style.display="none";
+				loc3.style.display="none";
+				loc4.style.display="none";
+				loc5.style.display="none";
+				vedro.style.bottom ="215px";
+				vedro.style.right ="250px";
+				loc6.style.display="none";
+			}
+
+			function changeLocation2(){
+				document.body.style.backgroundImage = "url(game2.jpg)";
+				loc.style.display="block";
+				loc1.style.display="none";
+				loc2.style.display="none";
+				loc3.style.display="none";
+				loc4.style.display="none";
+				loc5.style.display="none";
+				vedro.style.bottom ="50px";
+				vedro.style.right ="130px";
+				loc6.style.display="none";
+			}
+
+			function changeLocation3(){
+				document.body.style.backgroundImage = "url(game3.jpg)";
+				loc.style.display="block";
+				loc1.style.display="none";
+				loc2.style.display="none";
+				loc3.style.display="none";
+				loc4.style.display="none";
+				loc5.style.display="none";
+				vedro.style.bottom ="190px";
+				vedro.style.right ="5px";
+				loc6.style.display="none";
+			}
+
+			function changeLocation4(){
+				document.body.style.backgroundImage = "url(game4.jpeg)";
+				loc.style.display="block";
+				loc1.style.display="none";
+				loc2.style.display="none";
+				loc3.style.display="none";
+				loc4.style.display="none";
+				loc5.style.display="none";
+				vedro.style.bottom ="40px";
+				vedro.style.right ="1750px";
+				loc6.style.display="none";
+			}
+
+			function changeLocation5(){
+				document.body.style.backgroundImage = "url(game5.png)";
+				loc.style.display="block";
+				loc1.style.display="none";
+				loc2.style.display="none";
+				loc3.style.display="none";
+				loc4.style.display="none";
+				loc5.style.display="none";
+				vedro.style.bottom ="46%";
+				vedro.style.right ="50px";
+				loc6.style.display="none";
+			}
+
+			function changeLocation(){
+				loc.style.display="none";
+				loc1.style.display="block";
+				loc2.style.display="block";
+				loc3.style.display="block";
+				loc4.style.display="block";
+				loc5.style.display="block";
+				loc6.style.display="block";
+			}
+
+			let audio = new Audio("nature.mp3");
+			let fredy = new Audio("freddy.mp3");
+
+
+			function playBackgroundSound() {
+				audio.loop=true;
+				audio.play();
+			}
+
+			function freddy1() {
+				fredy.play();
+			}
+
+		</script>
+
+		<div class="about">
+			Рыбалка в Майнкрафт 1.0 <div class="secret"> ТЫ ЖИВОДЁР!!!</div>
+		</div>
+		
+		<div class="sign", id="sign">
+	        <span class="text" id="text"></span>
+	        <img src="Fish/fish1.jpg", class="karas", id="karas">
+		</div>
+		<img src="Stick.png", class="stick", id="stick">
+		<img src="Poplavok1.png", class="float", id="float1">
+		<img src="mishk_frede.webp", class="frede", id="frede", onclick="freddy1()">
+		<img src="Vedro.png", class="vedro", id="vedro", onclick="openVedro()">
+		<button class="loc", id="0", onclick="changeLocation()">Локации</button>
+		<button class="loc5", id="6", onclick="changeLocation1()">6</button>
+		<button class="loc4", id="5", onclick="changeLocation2()">5</button>
+		<button class="loc3", id="4", onclick="changeLocation3()">4</button>
+		<button class="loc2", id="3", onclick="changeLocation4()">3</button>
+		<button class="loc1", id="2", onclick="changeLocation5()">2</button>
+		<button class="loc6", id="1", onclick="changeLocation6()">1</button>
+		<button class="podsech", id="podsech", onclick="fishBite()">Подсечь</button>
+		<button class="close", id="close", onclick="closeFish()">Закрыть</button>
+		
+		
+	</body>
+</html>
